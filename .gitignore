@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Heavy generated artifacts (regenerate with scripts/run_all.sh).
+# Figures + metrics in results/ ARE tracked so the READMEs render on GitHub.
+results/*.pt
+results/*.npz
+
+# Local tooling / notes
+.remember/
+.claude/
+docs/
+.DS_Store

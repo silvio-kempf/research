@@ -1,0 +1,26 @@
+{
+  "comparison": {
+    "random policy": 0.14,
+    "world-model MPC\n(no policy)": 0.99,
+    "policy-guided MPC\n(VLA + world model)": 1.0,
+    "VLA only": 1.0
+  },
+  "K": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "success_vs_K": [
+    0.19,
+    0.76,
+    0.97,
+    0.99,
+    1.0,
+    0.98,
+    1.0
+  ]
+}
