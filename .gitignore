@@ -9,6 +9,12 @@ __pycache__/
 results/*.pt
 results/*.npz
 
+# P5 raw videos + cached embeddings (large, local only)
+p5_tennis_world_model/data/raw/*.MOV
+p5_tennis_world_model/data/raw/*.mov
+p5_tennis_world_model/data/raw/*.mp4
+p5_tennis_world_model/**/embeddings/
+
 # Local tooling / notes
 .remember/
 .claude/
