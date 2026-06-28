@@ -21,4 +21,7 @@ uv run python p2_video_world_model/run_video_wm.py --epochs 30
 echo "== P4: Language robustness fix (closes the P3 loop) =="
 uv run python p4_language_robustness/run_language_robustness.py
 
+echo "== P5: Latent world model of real tennis swings =="
+uv run python p5_tennis_world_model/run_tennis_wm.py
+
 echo "All done. Figures are in results/."
