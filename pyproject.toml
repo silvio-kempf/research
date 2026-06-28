@@ -17,6 +17,8 @@ dependencies = [
     "scikit-learn>=1.4",
     "pytest>=8.0",
     "av>=12.0",
+    "jupyter>=1.0",
+    "nbformat>=5.10",
 ]
 
 [project.optional-dependencies]
