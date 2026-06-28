@@ -20,7 +20,8 @@ bash scripts/run_all.sh        # trains everything, writes all figures to result
 ## The through-line
 
 Two threads over one shared VLA. First, **VLA robustness**: diagnose a failure (P3), then fix
-it (P4). Second, **world models**: use one to control (P1) and to imagine (P2).
+it (P4). Second, **world models**: use one to control (P1), to imagine (P2), and to learn
+dynamics from real video (P5).
 
 | | Question | Result |
 |---|---|---|
@@ -28,6 +29,7 @@ it (P4). Second, **world models**: use one to control (P1) and to imagine (P2).
 | **P4** | *Can we fix that failure?* | fix: instruction augmentation restores held-out paraphrases to about 1.00 |
 | **P1** | *Can a world model control the agent?* | control: planning through a latent world model reaches 0.99 with no policy |
 | **P2** | *Can a world model replace the simulator?* | imagine: dream action-conditioned rollouts for data and eval |
+| **P5** | *Can a world model learn dynamics from real video?* | real: latent world model beats persistence on my tennis clips; conditioning diagnosed |
 
 The shared core is a genuine VLA: a CNN with **FiLM language-conditioning + spatial-softmax
 keypoints** that grounds an instruction ("reach the red object") in pixels and emits
@@ -87,6 +89,22 @@ commanded actions while the scene stays consistent, with the characteristic comp
 of pixel-space world models (quantified in `results/p2_rollout_error.png`). Such a model is a
 neural simulator for generating synthetic VLA training and eval data. See `p2_video_world_model/`.
 
+## P5: A latent world model from real video (sim to real)
+
+The latent-world-model idea taken from simulation to **11 real handheld phone clips of my own
+forehands and backhands**. Frames are encoded with frozen DINOv2, and a small GRU predicts the
+next latent, evaluated with leave-one-clip-out cross validation against a persistence baseline.
+
+![P5](results/p5_rollout_error.png)
+
+**Finding: the world model learns real dynamics, but conditioning needs more than 11 clips.**
+The unconditioned model beats persistence at every horizon (0.070 vs 0.089 cosine error at 10
+frames) by extrapolating the swing trajectory; standardizing the latents was the key fix.
+Conditioning on swing type makes it about ten times worse, because the swing label is only
+weakly decodable on held-out clips (about 0.62 vs 0.5 chance) so it does not generalize. An
+honest sim-to-real study with a built-in failure analysis. See `p5_tennis_world_model/` and the
+walkthrough notebook.
+
 ---
 
 ## Why a toy testbed (and not OpenVLA on LIBERO)?
@@ -106,6 +124,7 @@ p1_imagine_then_act/   latent world-model MPC
 p2_video_world_model/  action-conditioned dreaming
 p3_failure_analysis/   distribution-shift study (diagnosis)
 p4_language_robustness/ instruction augmentation (the fix)
+p5_tennis_world_model/ latent world model from real video + walkthrough notebook
 scripts/               training entry points + run_all.sh
 ```
 
