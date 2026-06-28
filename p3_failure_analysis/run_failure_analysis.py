@@ -6,9 +6,9 @@ Takes the trained VLA policy and evaluates it across one-axis-at-a-time perturba
     - visual noise          (sensor corruption)
     - instruction paraphrase(unseen phrasings of the same goal)
 
-Produces results/p3_failure_analysis.png and a JSON of metrics. The thesis hook: each
-axis is a different *kind* of generalization gap, and (P1) a world model can both flag
-and repair some of them.
+Produces results/p3_failure_analysis.png and a JSON of metrics. Each axis is a
+different *kind* of generalization gap, and (P1) a world model can both flag and
+repair some of them.
 
 Usage: uv run python p3_failure_analysis/run_failure_analysis.py
 """

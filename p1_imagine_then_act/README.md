@@ -92,11 +92,11 @@ Code: `src/vlawm/worldmodel/{latent_wm,mpc}.py` · Training: `scripts/train_worl
 
 ---
 
-# Write-up (thesis-style)
+# Write-up
 
-A structured account of this study in the format of a thesis chapter / short paper. This is
-how the same content maps onto Introduction → Related Work → Method → Experiments → Results
-→ Discussion → Limitations → Future Work.
+A structured account of this study in the format of a short research note, mapping the same
+content onto Introduction → Related Work → Method → Experiments → Results → Discussion →
+Limitations → Future Work.
 
 ## 1. Introduction
 

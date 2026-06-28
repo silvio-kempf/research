@@ -3,8 +3,7 @@
 Headline result: a world model trained only to predict distance-to-goal is an accurate
 enough neural simulator that *planning through it* (random-shooting MPC, no policy) drives
 the agent to the instructed object - while a random policy fails. Adding the VLA as a
-proposal (policy-guided MPC) is the "VLA + world model in the loop" configuration that
-the thesis targets.
+proposal (policy-guided MPC) is the "VLA + world model in the loop" configuration.
 
 Experiments:
   (A) Controller comparison: random policy / world-model MPC / policy-guided MPC / VLA.

@@ -1,8 +1,7 @@
 # Vision-Language-Action models + World Models: a research portfolio
 
-Four self-contained studies on **Vision-Language-Action (VLA) policies and world models**:
-where a VLA breaks, how to fix it, and how a world model can control and imagine. Built as
-preparation for a master thesis on VLAs and World Models.
+Five self-contained studies on **Vision-Language-Action (VLA) policies and world models**:
+where a VLA breaks, how to fix it, and how a world model can control, imagine, and anticipate.
 
 Everything runs in about 10 to 15 minutes on a single Apple-silicon laptop (MPS). No cluster
 and no proprietary checkpoints: a deliberately **controlled testbed** so every claim is a
@@ -128,4 +127,4 @@ p5_tennis_world_model/ latent world model from real video + walkthrough notebook
 scripts/               training entry points + run_all.sh
 ```
 
-Each project folder has its own README with a detailed walkthrough and a thesis-style write-up.
+Each project folder has its own README with a detailed walkthrough and structured write-up.

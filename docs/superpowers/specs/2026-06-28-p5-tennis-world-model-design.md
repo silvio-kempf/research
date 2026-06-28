@@ -98,7 +98,7 @@ Three isolated units, each independently understandable and testable.
   5. Train (live loss curve; teacher forcing explained)
   6. Roll out and evaluate (error vs horizon vs baselines, inline)
   7. Counterfactual (FH context, swap label, watch retrieval change)
-  8. Reflection (limits of tiny data, thesis directions)
+  8. Reflection (limits of tiny data, future directions)
   - Include occasional "try changing X" prompts (encoder layer, context length)
     for active experimentation.
 - Non-interactive path: `p5_tennis_world_model/run_tennis_wm.py` so P5 fits
@@ -114,7 +114,7 @@ Three isolated units, each independently understandable and testable.
 - Handheld camera couples camera motion with scene motion.
 - Results are relative to baselines + qualitative, not SOTA video generation.
 
-## Thesis hook
+## Project hook
 
 Latent world models learn controllable dynamics from real, uncurated video:
 sim (P1) -> real (P5). Conditioning on intent (swing type) echoes the

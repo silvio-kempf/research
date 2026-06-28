@@ -24,7 +24,7 @@
 - Create: `tests/test_tennis_data.py`, `tests/test_tennis_model.py`, `tests/test_tennis_retrieval.py`.
 - Modify: `pyproject.toml` — add `scikit-learn`, `pytest` deps.
 
-Conventions to follow (from existing repo): residual transitions (`z + delta`, see `latent_wm.py:step`), FiLM from `src/vlawm/nn.py:61`, `get_device()` from `src/vlawm/nn.py:9`, module docstrings explaining the thesis link (as in `video_wm.py`).
+Conventions to follow (from existing repo): residual transitions (`z + delta`, see `latent_wm.py:step`), FiLM from `src/vlawm/nn.py:61`, `get_device()` from `src/vlawm/nn.py:9`, and explanatory module docstrings.
 
 ---
 
@@ -964,7 +964,7 @@ md("""## 8. Reflection
   conditioning on intent changes the imagined rollout (counterfactual).
 - **Limits:** ~490 handheld frames means heavy overfitting risk and camera motion
   is entangled with swing motion. Results are relative + qualitative, not photoreal.
-- **Thesis directions:** scale data, add a real action signal (pose), decode latents
+- **Future directions:** scale data, add a real action signal (pose), decode latents
   to pixels, and place this world model inside a VLA control loop (P1 idea on real
   video).""")
 
@@ -1005,7 +1005,7 @@ git commit -m "P5: annotated teaching notebook walkthrough"
 
 - [ ] **Step 1: Write the README**
 
-Create `p5_tennis_world_model/README.md` (no em dashes). Structure: Intro, Related Work, Method, Results, Limitations, Thesis Directions. Use the actual numbers printed by `run_tennis_wm.py`. Template body:
+Create `p5_tennis_world_model/README.md` (no em dashes). Structure: Intro, Related Work, Method, Results, Limitations, Future Directions. Use the actual numbers printed by `run_tennis_wm.py`. Template body:
 
 ```markdown
 # P5: A Latent World Model of Tennis Swings
@@ -1040,7 +1040,7 @@ About 490 frames total is very small; overfitting is expected. Handheld camera
 couples camera motion with swing motion. Results are relative to baselines and
 qualitative, not photoreal video generation.
 
-## Thesis Directions
+## Future Directions
 Scale data, add a real action signal (body/racket pose), decode latents to pixels,
 and embed this world model in a VLA control loop on real video.
 ```

@@ -9,8 +9,8 @@ The model is trained to roll out H steps in latent space and predict, at every s
 the agent's distance to the *instructed* target. The planner (mpc.py) then imagines the
 outcome of candidate action sequences and selects the one minimizing predicted distance.
 
-This is the core thesis idea in miniature: a world model placed *inside* the VLA's
-control loop to verify and improve its actions.
+This is the core project idea in miniature: a world model placed *inside* the
+VLA's control loop to verify and improve its actions.
 """
 from __future__ import annotations
 

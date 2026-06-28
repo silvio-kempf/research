@@ -69,7 +69,7 @@ part of the opening-frame side signal could come from framing or camera motion,
 not only the ball and body pose. Results are relative to baselines and qualitative,
 not photoreal video.
 
-## Thesis Directions
+## Future Directions
 Collect multi-session clips with controlled framing, add explicit ball/pose state,
 decode latents to pixels, and place this anticipation model inside a VLA control
 loop on real video, extending P1 from simulation to the real world.

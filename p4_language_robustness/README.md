@@ -63,10 +63,10 @@ Code: `p4_language_robustness/run_language_robustness.py`,
 
 ---
 
-# Write-up (thesis-style)
+# Write-up
 
-A structured account of this study in the format of a thesis chapter or short paper, mapping
-the content onto Introduction, Related Work, Method, Experiments, Results, Discussion,
+A structured account of this study in the format of a short research note, mapping the
+content onto Introduction, Related Work, Method, Experiments, Results, Discussion,
 Limitations, and Future Work.
 
 ## 1. Introduction
